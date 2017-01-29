@@ -1,0 +1,29 @@
+# EgoAAC messages configuration file
+
+# Prefix (wooooo yeah)
+prefix: "&9[&6EgoAAC&9]"
+
+# Spam messages
+spam_too_fast: "Sorry but you may not chat that fast!"
+spam_slow_chat: "May you please slow down your messages?"
+spam_repeat: "Please, do not repeat yourself."
+spam_repeat_other: "You may not repeat that!"
+
+# Command messages
+aac_kick_broadcast: " was kicked for suspicious activity..."
+ban_message: "The anti-cheat detection has found you hacking, please appeal on the website."
+
+relog_message: "You are re-logging too fast! | Bot Protection"
+
+# Fastbow
+too_many_shots: "You are firing too many shots with your bow, please refrain from using it for 5 seconds."
+allow_bow: "You can now use your bow again."
+
+# Staff chat
+prefix_to_speak: "="
+# This will also be used for the notifications from aacstaffnotify in the config
+format: "&2&lEgoAAC &2[&a{sender}&2] &7> &a"
+
+# Combat logging
+killed_for_logging: "You were killed for combat logging. Please wait 30 seconds after a pvp fight."
+logging_broadcast: "{player} was killled for leaving the game while in a fight."

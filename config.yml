@@ -1,0 +1,443 @@
+#Ego Anti-Cheat V1.0 Alpha
+#DESIGNED FOR AAC 1.8 ONLY!
+#Made By MakinziGaming 
+#By Using this config you agree to the TOS!
+angle:
+   enabled: true
+   
+   max_diff: 0.24
+
+   max_player_diff: 0.15
+   
+   min_dist: 2.5
+   
+   cancel_false_hits: true
+   
+   thresholds:
+      3: "aacstaffnotify {player} is suspected for Killaura (Angle) (ping = {ping}, tps = {tps})"
+      5: "aackick {player} Impossible angles in attacks"
+
+badpackets:
+   enabled: true
+   
+   cancel_threshold: 10
+   
+   max_moves: 45
+
+   thresholds:
+      18: "aacstaffnotify {player} is suspected for Regen/NoPotion (ping = {ping}, tps = {tps})"
+      25: "aackick {player} Suspicious activity"
+   
+criticals:
+   enabled: true
+   
+   cancel_false_hit: true
+   
+   thresholds:
+      1: "aacstaffnotify {player} is suspected for Criticals (ping = {ping}, tps = {tps})"
+      3: "aackick {player} Criticals hacking is not allowed"
+
+fastbow:
+   enabled: true
+   
+   min_force: 0.17
+   
+   shots_fired_threshold: 2
+
+   thresholds:
+      3: "aacstaffnotify {player} is suspected for FastBow (ping = {ping}, tps = {tps})"
+      5: "aackick {player} Shooting arrows too quickly"
+
+fightspeed:
+   enabled: true
+
+   max_hits_per_second: 16
+
+   thresholds:
+      3: "aacstaffnotify {player} is suspected for AutoClicker (FightSpeed) (ping = {ping}, tps = {tps})"
+      5: "aackick {player} Strange click speed. (AutoClicker? Macros?)"
+
+normalmovements:
+   enabled: true
+
+   f_step: true
+
+   f_float: true
+
+   f_dy: true
+
+   teleport: true
+
+   thresholds:
+      8: "aacstaffnotify {player} may be movement hacking (ping = {ping}, tps = {tps})"
+      10: "aackick {player} Suspicious Movement (Speed? Lag?)"
+
+fly:
+   enabled: true
+   
+   max_jump: 1.6
+
+   allow: 0.1
+
+   slime_allow: 75.0
+
+   velocity_multiplier: 4.0
+
+   knockback_allow: 5.0
+
+   natural_allow: 2.5
+
+   teleport: true
+
+   thresholds:
+      5: "aacstaffnotify {player} is suspected for Fly (ping = {ping}, tps = {tps})"
+      10: "aackick {player} Moved unexpectedly"
+   
+speed:
+   enabled: true
+
+   sprinting_speed: 0.612
+   sneaking_speed: 0.312
+
+   surface_speed: 0.195
+   underwater_speed: 0.16
+   dive_speed: 0.632
+
+   cobweb_speed: 0.15
+   item_speed: 0.27
+   soul_sand_speed: 0.39
+   ice_speed: 0.78
+
+   jump_multiplier: 1.5
+
+   vel_multiplier: 1.5
+
+   dive_period: 12.0
+
+   use_move_counting: true
+
+   max_moves: 20
+
+   custom:
+      enabled: true
+      max_moves: 18.0
+      time: 110
+      bypass_band: true
+
+   max_sneak_toggles: 16
+
+   max_use_toggles: 16
+
+   speed_multiplier: 0.31
+
+   slow_multiplier: 0.03
+
+   band_multiplier: 5.0
+
+   vls_to_band: 8
+
+   clear_vl_delay: 15
+
+   thresholds:
+      3: "aacmessage {player} It looks like you might be glitching, please tap sneak and block with your sword"
+      5: "aacstaffnotify {player} is suspected for Speed hacking (ping = {ping}, tps = {tps})"
+      8: "aackick {player} Moved too quickly"
+
+headroll:
+   enabled: true
+
+   thresholds:
+      1: "aacstaffnotify {player} is suspected for Derp hacks (ping = {ping}, tps = {tps})"
+      2: "aackick {player} Illegal position(Lagging? Hacking? Being Cool?)"
+
+forcefield:
+   enabled: true
+ 
+   head_player_invisible: false
+
+   invisible_outside_pvp: false
+
+   head_player_height: 3.3
+ 
+   no_head_player_looking_up: true
+
+   use_side_players: true
+
+   past_player_names: true
+
+   online_player_names: true
+
+   head_tablist: true
+
+   magic:
+      random_sprint: true
+      equip_armour: true
+      equip_held_item: true
+      fake_on_ground: true
+      send_damaged_animation: true
+
+   thresholds:
+      5: "aacstaffnotify {player} is suspected for Killaura (NPC check) (ping = {ping}, tps = {tps})"
+      7: "aackick {player} Forcefield is not allowed"
+
+knockback:
+   enabled: true
+
+   tick_delay: 10
+
+   add_ping: true
+
+   max_ping: 450
+
+   min_knockback_dist: 0.01
+
+   min_knockback_time: 2
+
+   thresholds:
+      6: "aacstaffnotify {player} is suspected for Anti-Knockback (ping = {ping}, tps = {tps})"
+      9: "aackick {player} Not taking knockback"
+
+reach:
+   enabled: true
+
+   max_reach: 3.9
+
+   max_bukkit_reach: 9.0
+
+   move_multiplier: 3.9
+
+   thresholds:
+      6: "aacstaffnotify {player} is suspected for Reach (ping = {ping}, tps = {tps})"
+      9: "aackick {player} Hitting too far away"
+
+noswing:
+   enabled: true
+
+   thresholds:
+      6: "aacstaffnotify {player} is suspected for NoSwing (ping = {ping}, tps = {tps})"
+      8: "aackick {player} Not swinging arm"
+
+regen:
+   enabled: true
+
+   cancel_regen: true
+
+   min_regen_delay: 3600
+
+   thresholds:
+      6: "aacstaffnotify {player} is suspected for Regen (ping = {ping}, tps = {tps})"
+      8: "aackick {player} Regenerating health too quickly"
+
+killaura:
+   enabled: true
+
+   npc:
+      check_chance: 75
+
+      check_delay: 2
+
+      random_type: true
+
+      listen_delay: 3
+
+      min_dist: 4.0
+
+      ticks_spawned: 45
+
+      percent_distance: 50
+
+      npc_multiplier: 3
+
+      max_diff: 0.10
+
+      max_reach: 4.5
+
+      suspended_combat_time: 6
+
+   aimbot: 50
+
+   reach: 50
+
+   accuracy: 80
+
+   thresholds:
+      5: "aacstaffnotify {player} is suspected for Killaura (Heuristics) (ping = {ping}, tps = {tps})"
+      6: "kick {player} Suspicious (killaura-like) combat"
+
+combatimpossible:
+   enabled: true
+
+   cancel_dead: true
+
+   cancel_using_item: true
+
+   thresholds:
+      8: "aacstaffnotify {player} may be hitting illegitimately (or could be glitched) (ping = {ping}, tps = {tps})"
+
+nofall:
+   enabled: false
+
+   required_velocity: -0.1
+
+   deal_damage: true
+
+   thresholds:
+      4: "aacstaffnotify {player} is suspected for NoFall hacks (ping = {ping}, tps = {tps})"
+      6: "aackick {player} Suspicious activity midair"
+
+glide:
+   enabled: true
+
+   tolerance: 0.03
+
+   min_vl: 5
+
+   vel_ticks: 40
+
+   teleport: true
+
+   thresholds:
+      10: "aacstaffnotify {player} is suspected for Glide hacks (ping = {ping}, tps = {tps})"
+      15: "aacstaffnotify {player} is suspected for Glide hacks #2 (ping = {ping}, tps = {tps})"
+      20: "aacstaffnotify {player} is about to be kicked for Glide hacks (ping = {ping}, tps = {tps})"
+      25: "aackick {player} Not falling correctly. Severe lag?"
+
+climb:
+   enabled: true
+
+   max_start_speed: 0.9
+
+   max_ascent_speed: 0.2
+
+   teleport: true
+
+   thresholds:
+      2: "aacstaffnotify {player} is climbing ladders too quickly (ping = {ping}, tps = {tps})"
+      3: "aackick {player} Climbing ladders too quickly?"
+
+jesus:
+   enabled: true
+
+   teleport: true
+
+   thresholds:
+      10: "aacstaffnotify {player} is suspected for Jesus hacks (ping = {ping}, tps = {tps})"
+      18: "aacstaffnotify {player} is very likely to be using Jesus hacks"
+      25: "aackick {player} Walking on water?"
+
+phase:
+   enabled: true
+
+   freeze_time: 200
+
+   max_dist: 3.0
+
+   check_vclip: true
+
+   thresholds:
+      8: "aacstaffnotify {player} is suspected for Phase (ping = {ping}, tps = {tps})"
+      12: "aacstaffnotify {player} is suspected for Phase #2 (ping = {ping}, tps = {tps})"
+      15: "aackick {player} Going through blocks?"
+
+fastuse:
+   enabled: true
+
+   ms_to_use: 1200
+
+   thresholds:
+      5: "aacstaffnotify {player} is suspected for FastEat hacks (ping = {ping}, tps = {tps})"
+      9: "aackick {player} Using items too quickly"
+
+fastbreak:
+   enabled: true
+
+   let_ticks: 2
+
+   cancel_break: true
+
+   check_delay: true
+
+   thresholds:
+      10: "aacstaffnotify {player} is suspected for FastBreak hacks (ping = {ping}, tps = {tps})"
+      13: "aackick {player} Breaking blocks too fast"
+
+fastplace:
+   enabled: true
+
+   min_delay: 100
+
+   cancel_place: true
+
+   thresholds:
+      5: "aacstaffnotify {player} is suspected for FastPlace hacks (ping = {ping}, tps = {tps})"
+      8: "aackick {player} Placing blocks too fast"
+
+nuker:
+   enabled: true
+
+   max_breaks_per_second: 35
+
+   vl_divisor: 30
+
+   thresholds:
+      5: "aacstaffnotify {player} is suspected for Nuker (ping = {ping}, tps = {tps})"
+      9: "aackick {player} Breaking too many blocks"
+
+impossibleinteract:
+   enabled: true
+
+   cancel_liquids: true
+
+   cancel_ghosthand: true
+
+   thresholds:
+      9: "aacstaffnotify {player} is interacting suspiciously (ping = {ping}, tps = {tps})"
+      12: "aacstaffnotify {player} is interacting suspiciously #2 (ping = {ping}, tps = {tps})"
+
+playerradar:
+   enabled: true
+
+   required_dist: 15
+
+   max_dist: 48
+
+   thresholds:
+      10: "aacstaffnotify {player} is finding players suspiciously (ping = {ping}, tps = {tps})"
+      15: "aacstaffnotify {player} is finding players suspiciously #2 (ping = {ping}, tps = {tps}"
+      20: "aackick {player} Finding Players Suspiciously(Hacks? Too Good?)"
+
+spam:
+   enabled: true
+
+   whitelist:
+    - "asdfasdfkahsdfu92h3uha9sduh2ejaw9123823_1239123_2139dfadshUSDAhidsfhasdfAFSDhiasdf-ASDFhasdfkja_efhajk23bj"
+
+   message_limit: 4
+
+   chat_speed: 2
+
+   thresholds:
+      3: "aacstaffnotify {player} is probably spamming"
+      5: "aackick {player} Stop spamming, you sad person"
+
+ban_threshold: 2
+
+ban_command: "aacban {player} Hacking is not allowed on this server, please appeal on the website."
+
+kick_ticks: 120
+
+combat_time: 30
+
+kill_loggers: true
+
+log_file: true
+
+log_console: true
+
+aackick_broadcast: true
+
+usetps: true
+
+aac: true
+
+verbose: false
