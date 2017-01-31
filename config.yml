@@ -1,4 +1,4 @@
-#Ego Anti-Cheat V1.0 Alpha
+#Ego Anti-Cheat V1.1 Alpha
 #DESIGNED FOR AAC 1.8 ONLY!
 #Made By MakinziGaming 
 #By Using this config you agree to the TOS!
@@ -403,8 +403,8 @@ playerradar:
 
    thresholds:
       10: "aacstaffnotify {player} is finding players suspiciously (ping = {ping}, tps = {tps})"
-      15: "aacstaffnotify {player} is finding players suspiciously #2 (ping = {ping}, tps = {tps}"
-      20: "aackick {player} Finding Players Suspiciously(Hacks? Too Good?)"
+      13: "aacstaffnotify {player} is finding players suspiciously #2 (ping = {ping}, tps = {tps}"
+      28: "aackick {player} Finding Players Suspiciously(Hacks? Too Good?)"
 
 spam:
    enabled: true
@@ -426,7 +426,7 @@ ban_command: "aacban {player} Hacking is not allowed on this server, please appe
 
 kick_ticks: 120
 
-combat_time: 30
+combat_time: 15
 
 kill_loggers: true
 
@@ -434,7 +434,7 @@ log_file: true
 
 log_console: true
 
-aackick_broadcast: true
+aackick_broadcast: false
 
 usetps: true
 
